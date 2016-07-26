@@ -1,0 +1,77 @@
+@model 泉立方.Models.User
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create">
+    <div class="form-horizontal">
+        <h4>User</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Name" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ItemName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ItemName" class="form-control" />
+                <span asp-validation-for="ItemName" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PostFee" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PostFee" class="form-control" />
+                <span asp-validation-for="PostFee" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="QtyBox" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="QtyBox" class="form-control" />
+                <span asp-validation-for="QtyBox" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ActCost" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ActCost" class="form-control" />
+                <span asp-validation-for="ActCost" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="TotalPrice" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="TotalPrice" class="form-control" />
+                <span asp-validation-for="TotalPrice" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Address" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
