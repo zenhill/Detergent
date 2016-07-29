@@ -26,6 +26,10 @@ namespace 泉立方.Controllers
 
             return View();
         }
+        public IActionResult Users()
+        {
+            return View();
+        }
 
         public IActionResult Error()
         {
